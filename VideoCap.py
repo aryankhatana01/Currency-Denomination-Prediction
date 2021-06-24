@@ -12,7 +12,7 @@ import pyttsx3
 frameWidth= 640         # CAMERA RESOLUTION
 frameHeight = 480
 brightness = 180
-threshold = 0.85   # PROBABLITY THRESHOLD
+threshold = 0.95   # PROBABLITY THRESHOLD
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 # FOR SPEAKING OUT LOUD
@@ -65,8 +65,7 @@ while True:
         #print(getCalssName(classIndex))
         cv2.putText(imgOrignal,classIndex, (120, 35), font, 0.75, (0, 0, 255), 2, cv2.LINE_AA)
         cv2.putText(imgOrignal, str(round(probabilityValue*100,2) )+"%", (180, 75), font, 0.75, (0, 0, 255), 2, cv2.LINE_AA)
-        if probabilityValue > 0.95:
-            speak(classIndex + 'rupees')
+        speak(classIndex + 'rupees')
     cv2.imshow("Result", imgOrignal)
 
     if cv2.waitKey(1) and 0xFF == ord('q'):
