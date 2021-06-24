@@ -12,7 +12,7 @@ import pyttsx3
 frameWidth= 640         # CAMERA RESOLUTION
 frameHeight = 480
 brightness = 180
-threshold = 0.95   # PROBABLITY THRESHOLD
+threshold = 0.90   # PROBABLITY THRESHOLD
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 # FOR SPEAKING OUT LOUD
